@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  springboot-pro:
+    build: .
+    ports:
+      - "9090:9090"
+    networks:
+      - "sbpro_network"
+    volumes:
+      - "sbpro_volume:var/jenkins_home"
+    networks:
+      sbpro_network:
+        volumes:
+          sbpro_volume:
