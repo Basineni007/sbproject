@@ -1,0 +1,10 @@
+pipeline{
+  agent any
+    stages{
+          stage('cloning stage'){
+              steps{
+                    sh'''
+                        git 'https://github.com/Basineni007/sbproject.git'
+                      '''
+                  }
+        }
